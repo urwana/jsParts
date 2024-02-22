@@ -30,10 +30,8 @@ header {
   border: 1px solid #333;
   box-shadow: 0 0 2rem transparent;
   outline: none;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-
 .hamburger:hover, .hamburger:focus {
   box-shadow: 0 0 0.5rem rgba(161, 161, 161, 0.5);
 }
@@ -48,18 +46,15 @@ header {
   width: 18px;
   height: 2px;
   background-color: #333;
-  -webkit-transition: inherit;
   transition: inherit;
 }
-
 .hamburger__line::before, .hamburger__line::after {
   position: absolute;
   display: block;
   width: 100%;
   height: 100%;
   background-color: inherit;
-  content: '';
-  -webkit-transition: inherit;
+  content: "";
   transition: inherit;
 }
 
@@ -71,28 +66,23 @@ header {
   top: 5px;
 }
 
-.hamburger[aria-expanded="true"] {
+.hamburger[aria-expanded=true] {
   border: 1px solid #fff !important;
 }
 
-.hamburger[aria-expanded="true"] .hamburger__line {
+.hamburger[aria-expanded=true] .hamburger__line {
   background-color: transparent;
 }
-
-.hamburger[aria-expanded="true"] .hamburger__line::before, .hamburger[aria-expanded="true"] .hamburger__line::after {
+.hamburger[aria-expanded=true] .hamburger__line::before, .hamburger[aria-expanded=true] .hamburger__line::after {
   top: 0;
   background-color: #fff;
 }
 
-.hamburger[aria-expanded="true"] .hamburger__line::before {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
+.hamburger[aria-expanded=true] .hamburger__line::before {
   transform: rotate(45deg);
 }
 
-.hamburger[aria-expanded="true"] .hamburger__line::after {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
+.hamburger[aria-expanded=true] .hamburger__line::after {
   transform: rotate(-45deg);
 }
 
@@ -107,4 +97,4 @@ header {
   background-color: #000;
   color: #fff;
   visibility: hidden;
-}
+}/*# sourceMappingURL=style.css.map */

@@ -15,7 +15,7 @@
   transition: .4s;
 }
 
-.modalBg {
+.modalBackground {
   width: 100%;
   height: 100%;
   background-color: rgba(30,30,30,0.9);
@@ -32,7 +32,7 @@
   background-color: #fff;
 }
 
-.closeModal {
+.closeModalButton {
   position: absolute;
   top: 0.5rem;
   right: 1rem;
@@ -55,7 +55,7 @@ button {
   cursor: pointer;
 }
 
-#openModal {
+.openModal {
   position: absolute;
   top: 50%;
   left: 50%;

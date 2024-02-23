@@ -7,13 +7,14 @@ h1 {
   font-size: 40px;
 }
 .js-scroll-fadein {
-
   transition: opacity 1s;
   visibility: hidden;
   opacity: 0;
+
   &.is-fadein {
     visibility: visible;
     opacity: 1;
+    transition: opacity .8s ease-in-out; /* opacityの変化を0.5秒かけて行う */
   }
 }
 /*--------------------------------
@@ -29,13 +30,15 @@ h1 {
   border-radius: 22px;
   padding: 20px;
   transition: all 0.2s ease-in-out;
+
   &:hover{
     opacity: .8;
     bottom: 15px;
     box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.5);
-
   }
+
   &:before {
+    top: 14px;
     content: "";
     width: 12px;
     height: 12px;
@@ -44,8 +47,5 @@ h1 {
     transform: rotate(-45deg);
     position:  absolute;
     left: 13px;
-  }
-  &:before {
-    top: 14px;
   }
 }

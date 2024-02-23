@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   box-sizing: border-box;
@@ -16,6 +17,7 @@ h1 {
 .js-scroll-fadein.is-fadein {
   visibility: visible;
   opacity: 1;
+  transition: opacity 0.8s ease-in-out; /* opacityの変化を0.5秒かけて行う */
 }
 
 /*--------------------------------
@@ -38,6 +40,7 @@ h1 {
   box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.5);
 }
 .arrow:before {
+  top: 14px;
   content: "";
   width: 12px;
   height: 12px;
@@ -46,7 +49,4 @@ h1 {
   transform: rotate(-45deg);
   position: absolute;
   left: 13px;
-}
-.arrow:before {
-  top: 14px;
 }/*# sourceMappingURL=style.css.map */

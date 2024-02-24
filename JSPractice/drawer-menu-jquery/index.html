@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ハンバーガー</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+  <script src="main.js" defer></script>
 </head>
 <body>
   <header>
-    <button type="button" id="js-hamburger" class="button hamburger" aria-controls="js-glabal-menu" aria-expanded="false" aria-label="メニューを開閉する">
-      <span class="hamburger__line">
-      </span>
-    </button>
-    <div class="sp-global-menu" id="js-global-menu" aria-hidden="true">
+    <div class="js-hamburgerButton hamburger" aria-label="ドロワーメニューを開閉する">
+      <span class="hamburger__line"></span>
+    </div>
+    <div class="js-globalMenu sp-global-menu">
       <nav>
         <ul>
           <li>リスト</li>
@@ -22,11 +23,8 @@
           <li>リスト</li>
         </ul>
       </nav>
-    </div><!-- /.sp-header-menu -->
-    <div class="drawer-background" id="js-drawer-background">
-    </div><!-- /.drawer-background -->
+    </div>
+    <div class="js-drawer-background drawer-background" aria-label="ドロワーメニュー展開時の背景"></div>
   </header>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="main.js"></script>
 </body>
 </html>

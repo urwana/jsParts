@@ -8,17 +8,6 @@ header {
   border-bottom: 1px solid #000;
 }
 
-.button {
-  display: inline-block;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
 .hamburger {
   position: fixed;
   top: 16px;
@@ -31,6 +20,7 @@ header {
   box-shadow: 0 0 2rem transparent;
   outline: none;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .hamburger:hover, .hamburger:focus {
   box-shadow: 0 0 0.5rem rgba(161, 161, 161, 0.5);
@@ -58,6 +48,34 @@ header {
   transition: inherit;
 }
 
+.hamburger.is-active {
+  border: 1px solid #fff !important;
+}
+
+.hamburger__line::before {
+  top: -5px;
+}
+
+.hamburger__line::after {
+  top: 5px;
+}
+
+.hamburger.is-active .hamburger__line {
+  background-color: transparent;
+}
+.hamburger.is-active .hamburger__line::before, .hamburger.is-active .hamburger__line::after {
+  top: 0;
+  background-color: #fff;
+}
+
+.hamburger.is-active .hamburger__line::before {
+  transform: rotate(45deg);
+}
+
+.hamburger.is-active .hamburger__line::after {
+  transform: rotate(-45deg);
+}
+
 .drawer-background {
   position: fixed;
   z-index: 3;
@@ -73,42 +91,10 @@ header {
   opacity: 0;
 }
 
-.is-drawerActive .sp-global-menu {
-  transform: translateX(0px);
-  transition: 0.3s;
-}
-.is-drawerActive .drawer-background {
+.drawer-background.is-active {
   visibility: visible;
   opacity: 0.8;
   transition: 0.3s;
-}
-
-.hamburger__line::before {
-  top: -5px;
-}
-
-.hamburger__line::after {
-  top: 5px;
-}
-
-.hamburger[aria-expanded=true] {
-  border: 1px solid #fff !important;
-}
-
-.hamburger[aria-expanded=true] .hamburger__line {
-  background-color: transparent;
-}
-.hamburger[aria-expanded=true] .hamburger__line::before, .hamburger[aria-expanded=true] .hamburger__line::after {
-  top: 0;
-  background-color: #fff;
-}
-
-.hamburger[aria-expanded=true] .hamburger__line::before {
-  transform: rotate(45deg);
-}
-
-.hamburger[aria-expanded=true] .hamburger__line::after {
-  transform: rotate(-45deg);
 }
 
 .sp-global-menu {
@@ -122,6 +108,11 @@ header {
   height: 100vh;
   background-color: #000;
   color: #fff;
+  transition: 0.3s;
   transform: translateX(280px);
+}
+
+.sp-global-menu.is-active {
+  transform: translateX(0px);
   transition: 0.3s;
 }/*# sourceMappingURL=style.css.map */

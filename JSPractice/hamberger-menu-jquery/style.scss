@@ -107,3 +107,7 @@ header {
   color: #fff;
   visibility: hidden;
 }
+
+.sp-global-menu[aria-hidden="false"]{
+  visibility: visible;
+}

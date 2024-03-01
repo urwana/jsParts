@@ -97,4 +97,8 @@ header {
   background-color: #000;
   color: #fff;
   visibility: hidden;
+}
+
+.sp-global-menu[aria-hidden=false] {
+  visibility: visible;
 }/*# sourceMappingURL=style.css.map */
